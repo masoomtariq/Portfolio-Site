@@ -42,16 +42,9 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Animate button scale
-    animate('.submit-btn', {
-        scale: [1, 0.95, 1],
-        duration: 300,
-        easing: 'easeInOutQuad'
-    });
 
     try {
-      const response = await fetch('https://formspree.io/f/xlgwrnzr', {
+      const response = await fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
