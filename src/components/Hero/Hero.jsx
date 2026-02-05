@@ -93,7 +93,7 @@ const Hero = () => {
 
             <div className="flex flex-row items-center justify-between gap-6 md:block">
               <div className="flex-1 space-y-3 md:space-y-8">
-                <h1 ref={nameRef} className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.9] opacity-0 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-muted-foreground animate-gradient">
+                <h1 ref={nameRef} className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[0.95] opacity-0 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-muted-foreground animate-gradient">
                   M. Masoom Tariq
                 </h1>
                 
