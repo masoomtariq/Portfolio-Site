@@ -10,7 +10,6 @@ const About = () => {
   const highlights = [
     { icon: Code, title: 'Backend Focus', desc: 'Scalable systems' },
     { icon: Cpu, title: 'AI Integration', desc: 'Generative AI' },
-    { icon: Layers, title: 'Full Stack', desc: 'End-to-end' },
   ];
 
   useEffect(() => {
