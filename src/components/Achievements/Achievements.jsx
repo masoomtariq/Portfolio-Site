@@ -1,19 +1,12 @@
 import { useEffect, useRef } from 'react';
-import { Trophy, Award, ExternalLink } from 'lucide-react';
+import { Award, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import { createTimeline, stagger } from 'animejs';
 
-const hackathons = [
-  { title: 'Software Sprinting Hackathon', desc: 'Hackathon on software techniques', date: '2025' },
-  { title: 'Vibehack Hackathon', desc: 'Developed a RAG system', date: '2025' },
-  { title: 'Code Clash', desc: 'Competitive exam on DSA problem solving', date: '2025' },
-  { title: 'AI/ML Hackathon', desc: 'Intelligent document processing', date: '2024' },
-];
-
 const certifications = [
-  { title: 'Microsoft Python Development', issuer: 'Microsoft', date: '2024', link: 'https://www.coursera.org/account/accomplishments/professional-cert/LZIF5AOB50BB' },
-  { title: 'AI For Everyone', issuer: 'DeepLearning.AI', date: '2024', link: 'https://www.coursera.org/account/accomplishments/verify/UAVQHHC448GK' },
-  { title: 'Agentic AI and AI Agents: A Primer for Leaders', issuer: 'Vanderbilt University', date: '2024', link: 'https://www.coursera.org/account/accomplishments/verify/3BELPC01IRJY' },
+  { title: 'PYTHON FOR DATA SCIENCE, AI & DEVELOPMENT', issuer: 'Coursera', link: 'https://www.coursera.org/account/accomplishments/verify/K53DH18T40JM' },
+  { title: 'DEVOPS AND SOFTWARE ENGINEERING WORKFLOWS', issuer: 'Coursera', link: 'https://www.coursera.org/account/accomplishments/specialization/GTPCU96ZS6BF' },
+  { title: 'IBM AI ENGINEERING PROFESSIONAL CERTIFICATE', issuer: 'Coursera', link: 'https://www.coursera.org/account/accomplishments/professional-cert/SENFDD9C1PZU' },
 ];
 
 const Achievements = () => {
@@ -34,18 +27,12 @@ const Achievements = () => {
                 translateY: ['20px', '0px'],
                 duration: 600,
               })
-              .add(sectionRef.current.querySelectorAll('.hackathon-item'), {
-                opacity: [0, 1],
-                translateX: ['-20px', '0px'],
-                delay: stagger(100),
-                duration: 800,
-              }, '-=400')
               .add(sectionRef.current.querySelectorAll('.cert-item'), {
                 opacity: [0, 1],
                 translateX: ['20px', '0px'],
                 delay: stagger(100),
                 duration: 800,
-              }, '-=800');
+              }, '-=400');
 
             observer.unobserve(entry.target);
           }
@@ -69,25 +56,7 @@ const Achievements = () => {
           <h3 className="text-4xl font-display font-bold">Achievements</h3>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16">
-          {/* Hackathons */}
-          <div>
-            <div className="flex items-center gap-3 mb-8 achieve-title opacity-0">
-              <Trophy className="text-primary" size={24} />
-              <h4 className="text-2xl font-bold">Hackathons</h4>
-            </div>
-            <div className="space-y-8">
-              {hackathons.map((item, index) => (
-                <div key={index} className="hackathon-item opacity-0 relative pl-8 border-l border-border/50 hover:border-primary/50 transition-colors duration-300 group">
-                  <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-primary transition-transform duration-300 group-hover:scale-150" />
-                  <span className="text-xs font-mono text-muted-foreground mb-1 block">{item.date}</span>
-                  <h5 className="text-lg font-bold mb-1">{item.title}</h5>
-                  <p className="text-muted-foreground text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
+        <div className="max-w-2xl mx-auto">
           {/* Certifications */}
           <div>
             <div className="flex items-center gap-3 mb-8 achieve-title opacity-0">

@@ -50,11 +50,27 @@ const Contact = () => {
         easing: 'easeInOutQuad'
     });
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormState({ name: '', email: '', message: '' });
-    setTimeout(() => setIsSubmitted(false), 3000);
+    try {
+      const response = await fetch('https://formspree.io/f/xlgwrnzr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormState({ name: '', email: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 3000);
+      } else {
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -83,6 +99,7 @@ const Contact = () => {
               <Input
                 type="text"
                 id="name"
+                name="name"
                 required
                 value={formState.name}
                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
@@ -95,6 +112,7 @@ const Contact = () => {
               <Input
                 type="email"
                 id="email"
+                name="email"
                 required
                 value={formState.email}
                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
@@ -107,6 +125,7 @@ const Contact = () => {
             <label htmlFor="message" className="text-sm font-medium text-muted-foreground">Message</label>
             <Textarea
               id="message"
+              name="message"
               required
               rows={6}
               value={formState.message}

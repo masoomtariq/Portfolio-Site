@@ -93,7 +93,7 @@ const Navbar = () => {
 
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="text-2xl font-display font-bold tracking-tighter hover:opacity-80 transition-opacity relative group">
-          Ali Raza<span className="text-muted-foreground group-hover:text-primary transition-colors">.</span>
+          M. Masoom Tariq<span className="text-muted-foreground group-hover:text-primary transition-colors">.</span>
         </a>
 
         {/* Desktop Nav */}

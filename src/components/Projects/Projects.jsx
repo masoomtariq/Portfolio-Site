@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Bot, Brain, Wallet, ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import { BookOpen, Bot, Mic, ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
@@ -8,33 +8,33 @@ import { animate, stagger } from 'animejs';
 
 const projects = [
   {
-    title: 'Customer Support Agent',
-    description: 'An intelligent AI-powered customer support agent that collects user information through natural conversation, stores data securely in a database, and automatically sends personalized follow-up emails to users.',
-    icon: Bot,
-    tags: ['Python', 'LangChain', 'PostgreSQL', 'FastAPI', 'Email API'],
+    title: 'Documentation Book With Chatbot',
+    description: 'Developed an interactive textbook platform for robotics using Docusaurus and FastAPI. Integrated a RAG-based AI chatbot using Google Gemini and Qdrant to provide real-time, context-aware learning assistance and semantic search. Built a seamless React interface for conversational tutoring and automated content explanations.',
+    icons: [BookOpen, Bot],
+    tags: ['FastAPI', 'Docusaurus', 'Google Gemini', 'Qdrant'],
     color: '#10A37F',
-    features: ['AI Conversation', 'Data Collection', 'Auto Emails', 'Database Storage'],
-    github: '#',
-    live: '#',
+    features: ['RAG Chatbot', 'Semantic Search', 'Interactive Learning', 'Real-time Assistance'],
+    github: 'https://github.com/masoomtariq/Hakathon_project',
+    live: 'https://robotics-liart.vercel.app',
   },
   {
-    title: 'FlashQuiz',
-    description: 'A smart learning platform that uses RAG (Retrieval-Augmented Generation) to automatically generate interactive quizzes and flashcards from documents uploaded by users, making studying more efficient.',
-    icon: Brain,
-    tags: ['RAG', 'OpenAI', 'Vector DB', 'React', 'FastAPI'],
+    title: 'AI-Powered Document Assistant',
+    description: 'Developed a RAG-based application for interactive querying of PDFs and text files using LangChain and Google Generative AI embeddings. Built a multi-agent workflow with LangGraph to intelligently route queries based on context relevance and document summaries. Integrated MultiQueryRetriever and hybrid model execution (Gemini & LLaMA) to deliver high-accuracy, context-aware responses while tracking performance via LangSmith.',
+    icons: [Bot],
+    tags: ['LangChain', 'LangGraph', 'Google Gemini', 'Groq Llama'],
     color: '#8B5CF6',
-    features: ['Document Upload', 'AI Quiz Generation', 'Flashcards', 'RAG System'],
-    github: '#',
+    features: ['Multi-Agent Workflow', 'PDF Querying', 'Hybrid AI Models', 'LangSmith Tracking'],
+    github: 'https://github.com/masoomtariq/Document_Q-A',
     live: '#',
   },
   {
-    title: 'Academy Finance System',
-    description: 'A comprehensive financial management system designed for educational academies. Handles all financial operations including fee collection, expense tracking, payroll, and detailed financial reporting.',
-    icon: Wallet,
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Charts.js', 'PDF Reports'],
+    title: 'Urdu Voice Chatbot',
+    description: 'Built a bilingual voice chatbot application enabling Urdu users to interact via voice input and audio responses. Integrated Google Gemini for context-aware responses, real-time speech recognition for Urdu language input, and gTTS for natural voice synthesis. Implemented conversation history tracking with comprehensive error handling for enhanced user experience.',
+    icons: [Mic],
+    tags: ['Streamlit', 'Google Generative AI', 'Speech Recognition'],
     color: '#F59E0B',
-    features: ['Fee Management', 'Expense Tracking', 'Payroll', 'Reports'],
-    github: '#',
+    features: ['Voice Input/Output', 'Urdu Language', 'Context-Aware AI', 'Conversation History'],
+    github: 'https://github.com/masoomtariq/Urdu_Bot',
     live: '#',
   },
 ];
@@ -104,13 +104,15 @@ const Projects = () => {
                   <CardHeader className="relative z-10 pb-4">
                     {/* Icon */}
                     <div 
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110"
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center gap-1 mb-6 transition-all duration-500 group-hover:scale-110"
                       style={{ 
                         background: `linear-gradient(135deg, ${project.color}20, ${project.color}10)`,
                         border: `1px solid ${project.color}30`
                       }}
                     >
-                      <project.icon size={28} style={{ color: project.color }} />
+                      {project.icons.map((Icon, i) => (
+                        <Icon key={i} size={project.icons.length > 1 ? 20 : 28} style={{ color: project.color }} />
+                      ))}
                     </div>
                     
                     <CardTitle className="text-xl font-bold group-hover:text-[var(--project-color)] transition-colors duration-300">
@@ -189,7 +191,7 @@ const Projects = () => {
         {/* View All Projects Link */}
         <div className="mt-16 text-center project-anim">
           <a 
-            href="https://github.com/Ali-Raza-2111" 
+            href="https://github.com/masoomtariq" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"

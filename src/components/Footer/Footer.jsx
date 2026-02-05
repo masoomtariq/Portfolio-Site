@@ -1,4 +1,5 @@
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, Youtube, Instagram, Facebook } from 'lucide-react';
+import { SiHuggingface } from 'react-icons/si';
 
 const Footer = () => {
   return (
@@ -10,15 +11,19 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-8">
           {/* Brand */}
           <a href="#home" className="text-2xl font-display font-bold tracking-tighter group">
-            Ali Raza<span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">.</span>
+            M. Masoom Tariq<span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">.</span>
           </a>
           
           {/* Social Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap justify-center">
             {[
-              { icon: Github, href: "https://github.com/Ali-Raza-2111", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/ali-raza-5b646735b", label: "LinkedIn" },
-              { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
+              { icon: Github, href: "https://github.com/masoomtariq", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/masoomtariq/", label: "LinkedIn" },
+              { icon: Twitter, href: "https://x.com/mmasoomtariq", label: "Twitter" },
+              { icon: Youtube, href: "https://www.youtube.com/@MasoomTariq-w1w", label: "YouTube" },
+              { icon: Instagram, href: "https://www.instagram.com/malik66206/", label: "Instagram" },
+              { icon: Facebook, href: "https://www.facebook.com/masoom.tariq.5/", label: "Facebook" },
+              { icon: SiHuggingface, href: "https://huggingface.co/masoomtariq", label: "Hugging Face" }
             ].map((social, index) => (
               <a
                 key={index}

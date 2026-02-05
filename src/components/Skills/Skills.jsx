@@ -1,18 +1,19 @@
 import { useEffect, useRef } from 'react';
-import { SiPython, SiJavascript, SiReact, SiFastapi, SiOpenai, SiPostgresql, SiMongodb, SiGit } from 'react-icons/si';
+import { SiPython, SiFastapi, SiMongodb, SiGit, SiLangchain } from 'react-icons/si';
+import { Layers, Bot, Network } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import Tilt from '../ui/Tilt';
 import { animate, stagger } from 'animejs';
 
 const skills = [
   { name: "Python", icon: SiPython, color: "#3776AB" },
-  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-  { name: "React", icon: SiReact, color: "#61DAFB" },
   { name: "FastAPI", icon: SiFastapi, color: "#009688" },
-  { name: "OpenAI", icon: SiOpenai, color: "#10A37F" },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "Git", icon: SiGit, color: "#F05032" },
+  { name: "LangChain", icon: SiLangchain, color: "#1C3C3C" },
+  { name: "LangGraph", icon: Network, color: "#4169E1" },
+  { name: "RAG", icon: Layers, color: "#FF6B6B" },
+  { name: "Agent SDKs", icon: Bot, color: "#4ECDC4" },
 ];
 
 const Skills = () => {

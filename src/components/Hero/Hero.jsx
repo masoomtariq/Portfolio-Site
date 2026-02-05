@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, ArrowDown, Download } from 'lucide-react';
 import { Button } from '../ui/button';
 import Magnetic from '../ui/Magnetic';
 import { animate, createTimeline, stagger, random } from 'animejs';
-import profileImg from '../../assets/Personal_Image.jpeg';
+import profileImg from '../../assets/Personal_Image.png';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -94,11 +94,11 @@ const Hero = () => {
             <div className="flex flex-row items-center justify-between gap-6 md:block">
               <div className="flex-1 space-y-3 md:space-y-8">
                 <h1 ref={nameRef} className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.9] opacity-0 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-muted-foreground animate-gradient">
-                  Ali Raza
+                  M. Masoom Tariq
                 </h1>
                 
                 <h2 ref={titleRef} className="text-base sm:text-lg md:text-4xl font-light max-w-2xl opacity-0">
-                  <span className="text-muted-foreground">Software Engineer</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">&</span> <span className="text-muted-foreground">AI Enthusiast</span>
+                  <span className="text-muted-foreground">Software Developer</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">&</span> <span className="text-muted-foreground">AI Enthusiast</span>
                 </h2>
               </div>
 
@@ -113,7 +113,7 @@ const Hero = () => {
                   <div className="absolute inset-1 rounded-full overflow-hidden border-2 border-background shadow-xl">
                     <img 
                       src={profileImg} 
-                      alt="Ali Raza" 
+                      alt="M. Masoom Tariq" 
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
@@ -138,7 +138,7 @@ const Hero = () => {
               <div className="magnetic-wrap opacity-0">
                 <Magnetic>
                   <Button asChild variant="outline" size="lg" className="rounded-full text-base px-8 gap-2">
-                    <a href="/resume.pdf" download="Ali_Raza_Resume.pdf">
+                    <a href="/M_Masoom_Tariq_Resume.pdf" download="M_Masoom_Tariq_Resume.pdf">
                       <Download size={18} />
                       Resume
                     </a>
@@ -149,9 +149,9 @@ const Hero = () => {
 
             <div ref={socialRef} className="flex gap-4 pt-8">
               {[
-                { icon: Github, href: "https://github.com/Ali-Raza-2111", color: "hover:bg-[#333] hover:text-white dark:hover:bg-white dark:hover:text-[#333]" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/ali-raza-5b646735b", color: "hover:bg-[#0A66C2] hover:text-white" },
-                { icon: Mail, href: "mailto:aliraza21112005@gmail.com", color: "hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 hover:text-white" }
+                { icon: Github, href: "https://github.com/masoomtariq", color: "hover:bg-[#333] hover:text-white dark:hover:bg-white dark:hover:text-[#333]" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/masoomtariq/", color: "hover:bg-[#0A66C2] hover:text-white" },
+                { icon: Mail, href: "mailto:mmasoomtariq@gmail.com", color: "hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 hover:text-white" }
               ].map((social, index) => (
                 <a
                   key={index}
@@ -186,7 +186,7 @@ const Hero = () => {
                 <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-background shadow-inner">
                   <img 
                     src={profileImg} 
-                    alt="Ali Raza" 
+                    alt="M. Masoom Tariq" 
                     className="w-full h-full object-cover object-top grayscale contrast-110 brightness-95 transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-105"
                   />
                   {/* Overlay */}
