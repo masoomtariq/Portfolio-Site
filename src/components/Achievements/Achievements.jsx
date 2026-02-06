@@ -49,20 +49,15 @@ const Achievements = () => {
   }, []);
 
   return (
-    <section id="achievements" ref={sectionRef} className="py-24 bg-secondary/5">
+    <section id="certifications" ref={sectionRef} className="py-24 bg-secondary/5">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="mb-16 achieve-title opacity-0">
-          <h2 className="text-sm font-medium text-primary mb-4 tracking-widest uppercase">Milestones</h2>
-          <h3 className="text-4xl font-display font-bold">Achievements</h3>
+          <h2 className="text-sm font-medium text-primary mb-4 tracking-widest uppercase">Professional Development</h2>
+          <h3 className="text-4xl font-display font-bold">Certifications</h3>
         </div>
 
         <div className="max-w-2xl mx-auto">
-          {/* Certifications */}
           <div>
-            <div className="flex items-center gap-3 mb-8 achieve-title opacity-0">
-              <Award className="text-primary" size={24} />
-              <h4 className="text-2xl font-bold">Certifications</h4>
-            </div>
             <div className="space-y-4">
               {certifications.map((item, index) => (
                 <div key={index} className="cert-item opacity-0">
