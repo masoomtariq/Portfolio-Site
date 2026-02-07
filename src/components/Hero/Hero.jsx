@@ -98,7 +98,7 @@ const Hero = () => {
                 </h1>
                 
                 <h2 ref={titleRef} className="text-base sm:text-lg md:text-4xl font-light max-w-2xl opacity-0">
-                  <span className="text-muted-foreground">Software Developer</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">&</span> <span className="text-muted-foreground">AI Enthusiast</span>
+                  <span className="text-muted-foreground">Software / AI Engineer</span>
                 </h2>
               </div>
 
